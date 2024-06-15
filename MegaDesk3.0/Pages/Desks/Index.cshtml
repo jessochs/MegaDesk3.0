@@ -6,16 +6,19 @@
 }
 
 <h1>Index</h1>
-<div class="ad center"></div>
+<div class="button">
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Create New Quote</a>
 </p>
-
+</div>
+<div class="center">
 <form>
-    <p>
+    <fieldset class="index-search">
+    <p class="center">
         Name: <input type="text" asp-for="SearchName" />
         <input type="submit" value="Search" />
     </p>
+        </fieldset>
 </form>
 
 <table class="table">
@@ -86,5 +89,7 @@
             </td>
         </tr>
 }
+    
     </tbody>
 </table>
+</div>
