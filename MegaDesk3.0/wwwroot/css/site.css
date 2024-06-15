@@ -1,22 +1,443 @@
-html {
-  font-size: 14px;
+@import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
+
+* {
+    box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+h1,
+h2 {
+    font-family: "lora", serif;
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    background-color: white;
+    padding: 5px;
+    padding-bottom: 0;
+}
+
+header {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+    header a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 26px;
+    }
+
+.siteName {
+    font-size: 1.5rem;
+}
+
+#tools {
+    float: right;
+}
+
+    #tools a {
+        font-size: 0.9rem;
+    }
+
+
+nav ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+    nav ul li {
+        font-size: 1rem;
+    }
+
+        nav ul li a {
+            display: inline;
+            text-decoration: none;
+            float: left;
+            color: white;
+            line-height: 2rem;
+            background-color: black;
+        }
+
+.container {
+    position: relative;
+}
+
+h1 {
+    font-size: 1.3rem;
+}
+
+img {
+    display: block;
+    width: 75%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.center {
+    margin: auto;
+    width: 75%;
+}
+
+.ad {
+    width: 150px;
+    text-align: center;
+    justify-content: center;
+}
+
+    .ad h2,
+    li {
+        color: dodgerblue;
+    }
+
+    .ad h2 {
+        margin: 0;
+    }
+
+    .ad ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+.button a {
+    text-decoration: none;
+}
+
+.button {
+    margin: auto;
+    background-color: lightskyblue;
+    padding: 0.5rem;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    box-shadow: 5px 5px 20px gray;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 0.3rem;
+    border-radius: 5px;
+    border: solid 2px black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: darkblue;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+.image {
+    background-color: lightskyblue;
+    border: 2px solid black;
+    margin: 0.5rem;
+}
+
+    .image img {
+        width: 40%;
+        padding: 0.5rem;
+    }
+
+.description {
+    background-color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: auto;
+    text-align: center;
+}
+
+footer {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.card {
+    justify-content: space-between;
+    padding: 1em;
+    border: 5px solid lightskyblue;
+    border-radius: 0.5rem;
+    max-width: 350px;
+    height: 225px;
+    text-align: center;
+}
+
+
+th,
+td {
+    border: 2px solid lightskyblue;
+    text-align: center;
+}
+
+.error {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+}
+
+.notice {
+    font-size: 1.5rem;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+#messages {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+    #messages ul {
+        list-style-type: none;
+    }
+
+form fieldset {
+    margin: 2rem 0;
+    border: 1px solid #445ba9;
+    border-radius: 10px;
+    padding: 0.5rem 2%;
+    margin: auto;
+    max-width: 460px;
+    text-align: center;
+}
+
+form label.top,
+form div {
+    display: block;
+    padding-top: 1rem;
+    color: #9c2c13;
+    font-size: 0.8rem;
+    margin: auto;
+}
+
+    form label.top input,
+    form label.top select,
+    select {
+        display: block;
+        font-size: 1rem;
+        border: solid 1px #999;
+        border-radius: 4px;
+        padding: 0.75rem;
+        color: #555;
+        width: 100%;
+        max-width: 20rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin: auto;
+    }
+
+form label.sbs {
+    display: block;
+    padding: 0.75rem 0;
+    color: #555;
+}
+
+form label.top input:required {
+    border-left: red solid 6px;
+}
+
+    form label.top input:required:valid {
+        border-left: green solid 6px;
+    }
+
+
+.management {
+    font-size: 1.5rem;
+}
+
+    .management a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+.textarea {
+    display: block;
+    font-size: 1rem;
+    text-align: left;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: 0.75rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    resize: none;
+}
+
+.managementTable th,
+td {
+    border: none;
+}
+
+.managementTable {
+    border-spacing: 1.3rem;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+
+@media only screen and (min-width: 30em) {
+    #wrapper {
+        padding: 1.5rem;
+        border: 5px solid lightskyblue;
+        border-radius: 0.5rem;
+    }
+
+    header {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .siteName {
+        font-size: 2.5rem;
+    }
+
+    #tools a {
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        font-size: 1.5rem;
+    }
+
+    nav ul a li {
+        line-height: 2.5rem;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        line-height: 2.5rem;
+    }
+
+    .ad {
+        width: 99%
+    }
+
+        .ad ul {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+    .button {
+        padding: 0.7rem;
+        font-size: 1rem;
+        width: 130px;
+        margin-bottom: 0.5rem;
+    }
+
+    .description {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    body {
+        margin: 0 auto;
+        width: 80%;
+        background-image: url(../images/site/checkerboard.jpg);
+    }
+
+    #wrapper {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .siteName {
+        font-size: 3rem;
+    }
+
+    #tools a {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    nav ul li a {
+        line-height: 2.5rem;
+    }
+
+    .button {
+        font-size: 1.3rem;
+        width: 225px;
+        margin-bottom: 1.5rem;
+    }
+
+    h3.button {
+        font-size: 1.5rem;
+        width: 300px;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding: 2rem;
+    }
+
+
+    .description {
+        font-size: 1.5rem;
+    }
+
+    .column {
+        float: right;
+        width: 50%;
+        padding: 10px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    .card {
+        height: 325px;
+    }
 }

@@ -6,56 +6,66 @@
 }
 
 <h1>Create</h1>
-
-<h4>Desk</h4>
+<div class="ad center">
+<h2>Desk</h2>
+</div>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
+            <fieldset>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Desk.Name" class="control-label"></label>
+            <div class="tooltip">
+                <label asp-for="Desk.Name" class="top"></label>
                 <input asp-for="Desk.Name" class="form-control" />
                 <span asp-validation-for="Desk.Name" class="text-danger"></span>
+                    <span class="tooltiptext">Please enter your full name.</span>
             </div>
-            <div class="form-group">
-                <label asp-for="Desk.Date" class="control-label"></label>
+            <div class="tooltip">
+                <label asp-for="Desk.Date" class="top"></label>
                 <input asp-for="Desk.Date" class="form-control" />
                 <span asp-validation-for="Desk.Date" class="text-danger"></span>
+                    <span class="tooltiptext">Please enter todays date.</span>
             </div>
-            <div class="form-group">
-                <label asp-for="Desk.Width" class="control-label"></label>
+            <div class="tooltip">
+                <label asp-for="Desk.Width" class="top"></label>
                 <input asp-for="Desk.Width" class="form-control" />
                 <span asp-validation-for="Desk.Width" class="text-danger"></span>
+                    <span class="tooltiptext">Width options are: Minimum 24. Maximum 96.</span>
             </div>
-            <div class="form-group">
-                <label asp-for="Desk.Height" class="control-label"></label>
+            <div class="tooltip">
+                <label asp-for="Desk.Height" class="top"></label>
                 <input asp-for="Desk.Height" class="form-control" />
                 <span asp-validation-for="Desk.Height" class="text-danger"></span>
+                    <span class="tooltiptext">Depth options are: Minimun 12. Maximum 48.</span>
             </div>
-            <div class="form-group">
-                <label asp-for="Desk.Drawers" class="control-label"></label>
+            <div class="tooltip">
+                <label asp-for="Desk.Drawers" class="top"></label>
                 <input asp-for="Desk.Drawers" class="form-control" />
                 <span asp-validation-for="Desk.Drawers" class="text-danger"></span>
+                    <span class="tooltiptext">Drawer options are: 0 to 7</span>
             </div>
-            <div class="form-group">
-                <label asp-for="Desk.Material" class="control-label"></label>
+            <div class="tooltip">
+                <label asp-for="Desk.Material" class="top"></label>
                 <input asp-for="Desk.Material" class="form-control" />
                 <span asp-validation-for="Desk.Material" class="text-danger"></span>
+                    <span class="tooltiptext">Material options are: Oak $200, Laminate $100, Pine $50, Rosewood $300, or Veneer $125</span>
             </div>
-            <div class="form-group">
-                <label asp-for="Desk.Rush" class="control-label"></label>
+            <div class="tooltip">
+                <label asp-for="Desk.Rush" class="top"></label>
                 <input asp-for="Desk.Rush" class="form-control" />
                 <span asp-validation-for="Desk.Rush" class="text-danger"></span>
+                    <span class="tooltiptext">Rush options are: None, 3 day, 5 day, or 7 day</span>
             </div>
-            <div class="form-group">
-                <label asp-for="Desk.Price" class="control-label"></label>
+            <div class="tooltip">
+                <label asp-for="Desk.Price" class="top"></label>
                 <input asp-for="Desk.Price" class="form-control" />
                 <span asp-validation-for="Desk.Price" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="tooltip">
+                <input type="submit" value="Create" class="button" />
             </div>
+            </fieldset>
         </form>
     </div>
 </div>
