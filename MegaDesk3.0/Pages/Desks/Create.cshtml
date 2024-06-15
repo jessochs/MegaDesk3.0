@@ -47,21 +47,21 @@
             </div>
             <div class="tooltip">
                 <label asp-for="Desk.Material" class="top"></label>
-                <input asp-for="Desk.Material" class="form-control" />
+                <input asp-for="Desk.Material" class="form-control"/>
                 <span asp-validation-for="Desk.Material" class="text-danger"></span>
-                    <span class="tooltiptext">Material options are: Oak $200, Laminate $100, Pine $50, Rosewood $300, or Veneer $125</span>
+                    <span class="tooltiptext">Material options are:0 - Oak $200, 1 - Laminate $100, 2 - Pine $50, 3 - Rosewood $300, or 4 - Veneer $125</span>
             </div>
             <div class="tooltip">
                 <label asp-for="Desk.Rush" class="top"></label>
                 <input asp-for="Desk.Rush" class="form-control" />
                 <span asp-validation-for="Desk.Rush" class="text-danger"></span>
-                    <span class="tooltiptext">Rush options are: None, 3 day, 5 day, or 7 day</span>
+                    <span class="tooltiptext">Rush options are: None (0), 3 day, 5 day, or 7 day</span>
             </div>
-            <div class="tooltip">
+            @* <div class="tooltip">
                 <label asp-for="Desk.Price" class="top"></label>
                 <input asp-for="Desk.Price" class="form-control" />
                 <span asp-validation-for="Desk.Price" class="text-danger"></span>
-            </div>
+            </div> *@
             <div class="tooltip">
                 <input type="submit" value="Create" class="button" />
             </div>
